@@ -24,6 +24,7 @@ class EntryController {
             entries.removeAtIndex(entriesIndex)
             
         }
+        
     }
     
     

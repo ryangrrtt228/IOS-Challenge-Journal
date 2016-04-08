@@ -33,11 +33,11 @@ class Entry : Equatable {
         self.title = title
         self.text = text
         self.timeStamp = timeStamp
+      
     }
     
-    
-}
 
+}
 
 func ==(lhs: Entry, rhs: Entry) -> Bool {
     return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)

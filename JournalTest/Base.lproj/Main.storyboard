@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Ca-K2-IWY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="0Ca-K2-IWY">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ca-K2-IWY" id="v3H-Mh-0RU">
@@ -34,6 +34,9 @@
                                         <constraint firstItem="wFG-4I-F4k" firstAttribute="leading" secondItem="v3H-Mh-0RU" secondAttribute="leadingMargin" id="rqi-FJ-gyC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="f2Q-Gv-JRT" kind="show" identifier="editEntry" id="Dhq-Zc-f3e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,7 +47,7 @@
                     <navigationItem key="navigationItem" title="Journal" id="ksg-tB-GMP">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Je0-rx-00h">
                             <connections>
-                                <segue destination="f2Q-Gv-JRT" kind="show" identifier="entryCell" id="HX9-WT-z3P"/>
+                                <segue destination="f2Q-Gv-JRT" kind="show" identifier="addEntry" id="HX9-WT-z3P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -65,6 +68,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-NF-3da">
+                                <rect key="frame" x="282" y="413" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="ClearButtonTapped:" destination="f2Q-Gv-JRT" eventType="touchUpInside" id="96n-67-bdk"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y0U-f0-16J">
+                                <rect key="frame" x="140" y="154" width="321" height="227"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idr-hS-6oS">
                                 <rect key="frame" x="140" y="94" width="321" height="30"/>
                                 <constraints>
@@ -73,20 +90,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y0U-f0-16J">
-                                <rect key="frame" x="140" y="154" width="321" height="227"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-NF-3da">
-                                <rect key="frame" x="282" y="413" width="36" height="30"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="ClearButtonTapped:" destination="f2Q-Gv-JRT" eventType="touchUpInside" id="96n-67-bdk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,4 +138,7 @@
             <point key="canvasLocation" x="516" y="459"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HX9-WT-z3P"/>
+    </inferredMetricsTieBreakers>
 </document>

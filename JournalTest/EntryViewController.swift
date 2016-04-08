@@ -27,11 +27,14 @@ class EntryViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        // SAVE TO PERSISTENCE
+        let entry = entry
+
     }
     
     
     @IBAction func ClearButtonTapped(sender: AnyObject) {
+        bodyTextView.text = " "
+        titleTextField.text = " "
         
         
     }
