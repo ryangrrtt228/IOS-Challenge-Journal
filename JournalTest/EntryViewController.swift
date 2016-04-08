@@ -14,32 +14,40 @@ class EntryViewController: UIViewController {
     
     @IBOutlet weak var bodyTextView: UITextView!
     
-
+    var entry: Entry?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        let entry = entry
-
+       
+        if let entry = self.entry {
+            entry.title = titleTextField.text!
+            entry.text = bodyTextView.text
+            entry.timeStamp = NSDate()
+        } else {
+            
+            let newEntry = Entry(title: self.titleTextField.text!, text: self.bodyTextView.text, timeStamp: NSDate())
+            EntryController.sharedController.addEntry(newEntry)
+            self.entry = newEntry
+            
+            
+        }
     }
     
-    
-    @IBAction func ClearButtonTapped(sender: AnyObject) {
-        bodyTextView.text = " "
-        titleTextField.text = " "
-        
-        
-    }
-
-    
-    
+        @IBAction func ClearButtonTapped(sender: AnyObject) {
+            bodyTextView.text = " "
+            titleTextField.text = " "
+            
+            
+        }
     
 }

@@ -10,9 +10,9 @@ import Foundation
 
 class Entry : Equatable {
     
-    let title: String
-    let text: String
-    let timeStamp: NSDate
+    var title: String
+    var text: String
+    var timeStamp: NSDate
     
     var dictionaryCopy: [String: AnyObject]{
         let dictionary = ["title":title, "text": text, "timeStamp": timeStamp]

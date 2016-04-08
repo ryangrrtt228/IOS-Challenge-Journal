@@ -49,17 +49,19 @@ class EntryListTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addEntry" {
-            
-          
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let entry = EntryController.sharedController.entries[indexPath.row]
+                if let destinationVC = segue.destinationViewController as? EntryViewController {
+                    destinationVC.entry = entry
                 }
-                
-                //Find cell that was tapped
-                
-                //Get entry corresponding to tapped cell
-                //give entry to destination view controller
-                
             }
+            
         }
         
+        
+        
+    }
+}
 
-    
+
+
