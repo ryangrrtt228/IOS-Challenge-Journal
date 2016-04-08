@@ -12,6 +12,10 @@
 		518149761CB83B250047BBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518149741CB83B250047BBC5 /* Main.storyboard */; };
 		518149781CB83B250047BBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518149771CB83B250047BBC5 /* Assets.xcassets */; };
 		5181497B1CB83B250047BBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518149791CB83B250047BBC5 /* LaunchScreen.storyboard */; };
+		518149831CB83C5E0047BBC5 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518149821CB83C5E0047BBC5 /* Entry.swift */; };
+		518149851CB83E960047BBC5 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518149841CB83E960047BBC5 /* EntryController.swift */; };
+		518149891CB84B180047BBC5 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518149881CB84B180047BBC5 /* EntryListTableViewController.swift */; };
+		5181498C1CB84D5B0047BBC5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5181498B1CB84D5B0047BBC5 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		518149771CB83B250047BBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5181497A1CB83B250047BBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5181497C1CB83B250047BBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518149821CB83C5E0047BBC5 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		518149841CB83E960047BBC5 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		518149881CB84B180047BBC5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		5181498B1CB84D5B0047BBC5 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +65,39 @@
 				518149701CB83B250047BBC5 /* AppDelegate.swift */,
 				518149721CB83B250047BBC5 /* ViewController.swift */,
 				518149741CB83B250047BBC5 /* Main.storyboard */,
+				518149861CB83EDF0047BBC5 /* Model */,
+				518149871CB83EF10047BBC5 /* Controller */,
+				5181498A1CB84B1F0047BBC5 /* View */,
 				518149771CB83B250047BBC5 /* Assets.xcassets */,
 				518149791CB83B250047BBC5 /* LaunchScreen.storyboard */,
 				5181497C1CB83B250047BBC5 /* Info.plist */,
 			);
 			path = JournalTest;
+			sourceTree = "<group>";
+		};
+		518149861CB83EDF0047BBC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				518149821CB83C5E0047BBC5 /* Entry.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		518149871CB83EF10047BBC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				518149841CB83E960047BBC5 /* EntryController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5181498A1CB84B1F0047BBC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				518149881CB84B180047BBC5 /* EntryListTableViewController.swift */,
+				5181498B1CB84D5B0047BBC5 /* EntryViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518149831CB83C5E0047BBC5 /* Entry.swift in Sources */,
+				518149891CB84B180047BBC5 /* EntryListTableViewController.swift in Sources */,
 				518149731CB83B250047BBC5 /* ViewController.swift in Sources */,
+				518149851CB83E960047BBC5 /* EntryController.swift in Sources */,
 				518149711CB83B250047BBC5 /* AppDelegate.swift in Sources */,
+				5181498C1CB84D5B0047BBC5 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
